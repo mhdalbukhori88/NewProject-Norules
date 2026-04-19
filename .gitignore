@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+__pycache__/
+*.pyc
+*.log
+.env
+backend/.env
+bot/.env
