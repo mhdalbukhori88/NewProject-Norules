@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NORULES COMMUNITY
 
 Website komunitas full-stack untuk `NORULES COMMUNITY` dengan stack:
@@ -216,3 +217,6 @@ Perintah berikut sudah lolos di workspace ini:
 npm run build
 npm run lint
 ```
+=======
+# Project-Komunitas-NORULESCOMMUNITY
+>>>>>>> 218a563ef21070b93660f59b5c36c9940346c36e
