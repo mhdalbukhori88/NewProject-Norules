@@ -220,11 +220,13 @@ export function AdminDashboardClient({ initialData }: { initialData: DashboardDa
             </select>
             <input type="date" value={memberForm.tanggal_lahir || ""} onChange={(e) => setMemberForm((p) => ({ ...p, tanggal_lahir: e.target.value }))} className="rounded-2xl border border-gold-400/30 bg-black/50 px-4 py-3 text-white outline-none" />
             <select value={memberForm.division || ""} onChange={(e) => setMemberForm((p) => ({ ...p, division: e.target.value }))} className="rounded-2xl border border-gold-400/30 bg-black/50 px-4 py-3 text-white outline-none">
+              <option>Community</option>
               <option>Club</option>
-              <option>Com</option>
+              <option>Both</option>
             </select>
             <select value={memberForm.role} onChange={(e) => setMemberForm((p) => ({ ...p, role: e.target.value }))} className="rounded-2xl border border-gold-400/30 bg-black/50 px-4 py-3 text-white outline-none">
               <option>Member</option>
+              <option>Officer</option>
               <option>Staff</option>
             </select>
             <select value={memberForm.status} onChange={(e) => setMemberForm((p) => ({ ...p, status: e.target.value }))} className="rounded-2xl border border-gold-400/30 bg-black/50 px-4 py-3 text-white outline-none">
@@ -431,7 +433,7 @@ export function AdminDashboardClient({ initialData }: { initialData: DashboardDa
               {data.feedback.map((item: FeedbackItem) => (
                 <div key={item.id} className="rounded-2xl border border-white/10 bg-black/35 p-4">
                   <p className="font-semibold text-white">
-                    {item.category} • {item.name || "Anonim"}
+                    {item.category} | {item.name || "Anonim"}
                   </p>
                   <p className="mt-1 text-sm text-white/55">{item.message}</p>
                   <div className="mt-3 flex gap-2">

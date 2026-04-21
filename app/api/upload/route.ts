@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { saveUploadedFile } from "@/lib/upload";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   try {
     const formData = await request.formData();
@@ -16,7 +18,7 @@ export async function POST(request: Request) {
   } catch (error) {
     return NextResponse.json(
       { message: error instanceof Error ? error.message : "Upload gagal." },
-      { status: 400 }
+      { status: 500 }
     );
   }
 }

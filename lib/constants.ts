@@ -1,5 +1,6 @@
 export const COMMUNITY_NAME = "NORULES COMMUNITY";
 export const TAGLINE = "Play Freely, Stay United, No Limits!";
+export const TAGLINE_ID = "Main bebas, tetap solid, dan tumbuh bareng tanpa batas.";
 export const FOUNDED_AT = "27 Oktober 2024";
 export const GAME_NAME = "AyoDance";
 
@@ -7,18 +8,8 @@ export const RULES_CONTENT = `RULES NORULES COMMUNITY
 "Play Freely, Stay United, No Limits!"
 
 Tentang Kami
-RISE AS ONE artinya:
-Bangkit sebagai satu.” / “Naik bersama sebagai satu tim.”
-Maknanya:
-Komunitas yang solid dan kompak. Menang, kalah, berkembang — semuanya bareng-bareng, tidak ada yang ditinggal, semua satu tujuan.
-
-Vibenya: kuat & bersatu
-- teamwork tinggi
-- tim yang terlihat kompak dan powerful
-
-Versi santainya:  “Naik bareng, kuat bareng.”
-
-Cocok kalau mau nunjukin identitas komunitas yang loyal, solid, dan siap push bareng untuk berkembang
+NORULES didirikan pada 27 Oktober 2024, adalah komunitas pecinta game AyoDance yang mengutamakan kebebasan berekspresi, keseruan, dan kebersamaan. Sesuai dengan namanya, NORULES hadir sebagai tempat bagi para player untuk bermain tanpa tekanan, tetap menjunjung tinggi rasa saling menghargai, dan menciptakan suasana yang positif serta penuh energi.
+Komunitas ini terbuka untuk semua kalangan, baik pemain baru maupun pro, yang ingin berkembang, mencari teman, dan menikmati game dengan cara yang santai namun tetap solid.
 
 Visi dan Misi
 Visi: Menjadi komunitas AyoDance yang solid, kreatif, dan bebas berekspresi tanpa batas, serta menjunjung tinggi kebersamaan, sportivitas, dan kesenangan dalam bermain.

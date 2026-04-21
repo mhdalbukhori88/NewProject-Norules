@@ -30,7 +30,8 @@ export default async function HomePage() {
         <div className="announcement-track animate-marquee px-4 text-sm uppercase tracking-[0.3em] text-gold-300">
           {Array.from({ length: 4 }).map((_, index) => (
             <span key={index}>
-              NORULES COMMUNITY • Event Baru • Recruitment Aktif • Play Freely, Stay United, No Limits!
+              NORULES COMMUNITY | Event Baru | Recruitment Aktif | Play Freely, Stay United, No
+              Limits!
             </span>
           ))}
         </div>
@@ -51,14 +52,17 @@ export default async function HomePage() {
                 />
               </div>
             </div>
-            <p className="font-orbitron text-sm uppercase tracking-[0.45em] text-gold-300">Founded {FOUNDED_AT}</p>
+            <p className="font-orbitron text-sm uppercase tracking-[0.45em] text-gold-300">
+              Founded {FOUNDED_AT}
+            </p>
             <h1 className="mt-4 max-w-3xl font-orbitron text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
               {COMMUNITY_NAME}
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-white/75">{TAGLINE}</p>
             <p className="mt-2 max-w-2xl text-sm text-gold-300/85">{TAGLINE_ID}</p>
             <p className="mt-6 max-w-2xl text-white/65">
-              Komunitas pecinta game {GAME_NAME} yang hadir untuk bermain santai, berkembang bersama, dan menjaga solidaritas tanpa batas.
+              Komunitas pecinta game {GAME_NAME} yang hadir untuk bermain santai, berkembang
+              bersama, dan menjaga solidaritas tanpa batas.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <GoldButton href="/join">Gabung Sekarang</GoldButton>
@@ -72,7 +76,9 @@ export default async function HomePage() {
         <div className="grid gap-5">
           <SectionCard>
             <p className="text-sm uppercase tracking-[0.25em] text-white/45">Total Member</p>
-            <p className="mt-3 font-orbitron text-4xl text-gold-300">{members.length.toString().padStart(2, "0")}</p>
+            <p className="mt-3 font-orbitron text-4xl text-gold-300">
+              {members.length.toString().padStart(2, "0")}
+            </p>
           </SectionCard>
           <SectionCard>
             <p className="text-sm uppercase tracking-[0.25em] text-white/45">Status System</p>
@@ -84,10 +90,15 @@ export default async function HomePage() {
           <SectionCard>
             <p className="font-orbitron text-lg text-gold-300">Tentang Komunitas</p>
             <p className="mt-3 text-sm leading-7 text-white/65">
-              Kenapa sih namanya NORULES? Berarti komunitas ini ngga ada aturan dong? 
+              Kenapa sih namanya NORULES? Berarti komunitas ini tidak punya aturan sama sekali?
             </p>
             <p className="mt-3 text-sm leading-7 text-white/65">
-              NORULES  bukan berarti tanpa arah atau tanpa aturan. Kita bebas berekspresi, bebas main, bebas jadi diri sendiri tapi tetap tahu batas. Di sini, respect tetap nomor satu, solidaritas dijaga, dan aturan dasar tetap jalan. Karena NORULES itu soal kebebasan bermain yang bertanggung jawab, tanpa batas untuk berkembang jadi bukan kebebasan yang asal-asalan.”            </p>
+              NORULES bukan berarti tanpa arah atau tanpa aturan. Kita bebas berekspresi, bebas
+              main, dan bebas jadi diri sendiri, tapi tetap tahu batas. Di sini, respect tetap
+              nomor satu, solidaritas dijaga, dan aturan dasar tetap jalan. Karena NORULES itu
+              soal kebebasan bermain yang bertanggung jawab, tanpa batas untuk berkembang, bukan
+              kebebasan yang asal-asalan.
+            </p>
           </SectionCard>
         </div>
       </section>
@@ -96,7 +107,9 @@ export default async function HomePage() {
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="font-orbitron text-3xl text-gold-300">EVENTS YANG AKAN DATANG</p>
-            <p className="mt-2 text-white/65">Agenda komunitas terbaru yang bisa Anda ikuti bersama member lain.</p>
+            <p className="mt-2 text-white/65">
+              Agenda komunitas terbaru yang bisa Anda ikuti bersama member lain.
+            </p>
           </div>
           <GoldButton href="/admin/login">+ Tambah Event</GoldButton>
         </div>
@@ -104,10 +117,17 @@ export default async function HomePage() {
           {events.map((event) => (
             <SectionCard key={event.id} className="overflow-hidden p-0">
               <div className="relative h-56">
-                <Image src={event.banner_url || "/assets/logo-primary.jpeg"} alt={event.title} fill className="object-cover" />
+                <Image
+                  src={event.banner_url || "/assets/logo-primary.jpeg"}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold-300">{new Date(event.event_date).toLocaleDateString("id-ID")}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold-300">
+                  {new Date(event.event_date).toLocaleDateString("id-ID")}
+                </p>
                 <h3 className="mt-3 text-2xl font-semibold text-white">{event.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/65">{event.description}</p>
               </div>
@@ -120,7 +140,9 @@ export default async function HomePage() {
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="font-orbitron text-3xl text-gold-300">MEMBER TERBARU</p>
-            <p className="mt-2 text-white/65">Enam member terbaru yang sudah disetujui admin.</p>
+            <p className="mt-2 text-white/65">
+              Enam member terbaru yang sudah disetujui admin.
+            </p>
           </div>
           <GoldButton href="/members">Lihat Semua Member</GoldButton>
         </div>
@@ -128,9 +150,17 @@ export default async function HomePage() {
           {members.map((member) => (
             <SectionCard key={member.id}>
               <div className="flex items-center gap-4">
-                <Image src={member.photo_url || "/assets/logo-primary.jpeg"} alt={member.nickname} width={78} height={78} className="rounded-full border border-gold-400/30 object-cover" />
+                <Image
+                  src={member.photo_url || "/assets/logo-primary.jpeg"}
+                  alt={member.nickname}
+                  width={78}
+                  height={78}
+                  className="rounded-full border border-gold-400/30 object-cover"
+                />
                 <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-gold-300">{member.role}</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-gold-300">
+                    {member.role}
+                  </p>
                   <p className="mt-1 text-xl font-semibold text-white">{member.nickname}</p>
                   <p className="text-sm text-white/55">{member.nama}</p>
                 </div>
